@@ -1,7 +1,6 @@
 import re
 
 class MyCsv:
-
     def __init__(self, csv_file):
         self. list_all_fields = []
         self.csv_file = csv_file
