@@ -54,6 +54,11 @@ class MyCsv(object):
         return len(self.list_all_fields) / self.n_cols()
 
     def get_cell(self, row, col): 
+        """
+        access and individual cell of the csv
+        given the 2 cordinantes (row,col)
+        with n_cols() we can acess the cell easily
+        """
         if not(0 <= row < self.n_rows() and  0 <= col < self.n_cols()):
             raise ValueError('incorrect cell index')
         return self.list_all_fields[row*self.n_cols()+col] 
