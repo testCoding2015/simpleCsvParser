@@ -3,8 +3,6 @@ import unittest
 import parser 
 import itertools
 
-
-
 class MyCsvTest(unittest.TestCase):
 	csv = parser.MyCsv("example.csv")
 	csv2 = parser.MyCsv("example2.csv")
