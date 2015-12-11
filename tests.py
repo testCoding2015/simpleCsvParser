@@ -10,9 +10,9 @@ class MyCsvTest(unittest.TestCase):
 
 	res_cells = [['John D', '120 any st.', '"Anytown, WW"', '08123', 'Andrew P', '114 Sansome st.',
 				'"San Francisco, CA"', '94105', 'Morgan R', '905 Green st.', '"Chicago, IL"', '68100'],
-				
-			     ['"For whom the bells toll"', '0', '0', '"Bring me some shrubbery"', '2', '3',
-			     '"Once upon \r\na time"', '5', '6', '"\'It\'s just a flesh wound."', '8', '9']
+
+				 ['"For whom the bells toll"', '0', '0', '"Bring me some shrubbery"', '2', '3',
+				 '"Once upon \r\na time"', '5', '6', '"\'It\'s just a flesh wound."', '8', '9']
 	]
 	res_types = [ ['String', 'String', 'String', 'Numeric'],
 				  ['String', 'Numeric', 'Numeric'],
