@@ -1,10 +1,8 @@
 
 import re
 
-
 class MyCsv:
-          
-    
+
     def __init__(self, csv_file):
         self. list_all_fields = []
 
@@ -72,7 +70,7 @@ class MyCsv:
 
             while ( maybe_numeric and  idx_line <= (self.n_rows()-1) ):
                 cell = self.get_cell(idx_line, idx_col)
-
+                
                 try:
                     cell_num = float(cell.replace(" ","").replace("\"",""))   # will converts 123 145.12 to the float 12314512/100
                 except ValueError:
