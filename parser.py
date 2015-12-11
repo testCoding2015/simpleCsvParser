@@ -1,12 +1,17 @@
 import re
 
-class MyCsv:
-    def __init__(self, csv_file):
+class MyCsv(object):
+    def __init__(self, path):
+        """
+        Simple csv parser that provides 
+        access to every cell, number of rows,
+        number of columns, type inference
+        """
         self. list_all_fields = []
-        self.csv_file = csv_file
+        self.csv_file = path
 
-        f = open(csv_file, 'r')
-        self.all_file_in_str = f.read()
+        csv_file = open(path, 'r')
+        self.all_file_in_str = csv_file.read()
 
         rgx = re.compile(r'''
             \s*                # illimted number of spaces
@@ -48,10 +53,10 @@ class MyCsv:
     def n_rows(self):
         return len(self.list_all_fields) / self.n_cols()
 
-    def get_cell(self, x, y): 
-        if not(0 <= x < self.n_rows() and  0 <= y < self.n_cols()):
+    def get_cell(self, row, col): 
+        if not(0 <= row < self.n_rows() and  0 <= col < self.n_cols()):
             raise ValueError('incorrect cell index')
-        return self.list_all_fields[x*self.n_cols()+y] 
+        return self.list_all_fields[row*self.n_cols()+col] 
 
     def infer_types(self): 
         """
