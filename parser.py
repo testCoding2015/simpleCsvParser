@@ -61,10 +61,10 @@ class MyCsv(object):
     def infer_types(self): 
         """
         We assume that the possible number formats are: 
-        xxx yyy.zz   (for exemple 123 145.12) 
-        xxx,yyy.zz   (for exemple 123,145.12) 
-        xxxyyy.zz    (for exemple 123145.12)  
-        xxx          (for exemple 123 ) 
+        xxx yyy.zz   (for example 123 145.12) 
+        xxx,yyy.zz   (for example 123,145.12) 
+        xxxyyy.zz    (for example 123145.12)  
+        xxx          (for example 123 ) 
         """   
         types = ["Numeric"]*self.n_cols()
         
