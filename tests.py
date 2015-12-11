@@ -34,7 +34,7 @@ class MyCsvTest(unittest.TestCase):
         self.failUnless([self.csv.n_cols(), self.csv2.n_cols()] == self.res_ncols)
 
     def test_infer_types(self):
-        infer1 = self.csv.infer_types()
+        infer = self.csv.infer_types()
         infer2 = self.csv2.infer_types()
         infer_deep = self.csv_inference.infer_types() 
 
