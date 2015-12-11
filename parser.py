@@ -28,7 +28,6 @@ class MyCsv:
         computes how many columns we get based on list_all_fields
         which is a flattened list of all cells
         """
-
         nb_commas = 0
         idx_char = 0
         nb_quotes = 0
