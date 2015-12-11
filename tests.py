@@ -1,7 +1,7 @@
 import sys
 import unittest
-import parser 
 import itertools
+import parser 
 
 class MyCsvTest(unittest.TestCase):
     csv = parser.MyCsv("example.csv")
@@ -22,8 +22,8 @@ class MyCsvTest(unittest.TestCase):
     res_ncols = [4,3]
                 
     def test_get_cell(self):
-        cells = [self.csv.get_cell(i,j) for i, j in itertools.product(range(3), range(4))]
-        cells2 = [self.csv2.get_cell(i,j) for i, j in itertools.product(range(4), range(3))]
+        cells = [self.csv.get_cell(i, j) for i, j in itertools.product(range(3), range(4))]
+        cells2 = [self.csv2.get_cell(i, j) for i, j in itertools.product(range(4), range(3))]
 
         self.failUnless([cells, cells2] == self.res_cells)
 

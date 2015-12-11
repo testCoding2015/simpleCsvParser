@@ -24,6 +24,11 @@ class MyCsv:
         self.list_all_fields = rgx.findall(self.all_file_in_str) 
 
     def n_cols(self):   
+        """
+        computes how many columns we get based on list_all_fields
+        which is a flattened list of all cells
+        """
+
         nb_commas = 0
         idx_char = 0
         nb_quotes = 0
