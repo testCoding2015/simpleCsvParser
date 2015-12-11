@@ -55,9 +55,9 @@ class MyCsv(object):
 
     def get_cell(self, row, col): 
         """
-        access and individual cell of the csv
+        * access and individual cell of the csv
         given the 2 cordinantes (row,col)
-        with n_cols() we can acess the cell easily
+        * known n_cols() we can easily acess the cell 
         """
         if not(0 <= row < self.n_rows() and  0 <= col < self.n_cols()):
             raise ValueError('incorrect cell index')
